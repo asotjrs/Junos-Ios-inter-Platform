@@ -1,0 +1,11 @@
+#configuration mode
+conf t
+#configuring interfaces with their IP addresses
+int f0/0
+ip add 172.18.1.1 255.255.255.252
+no sh
+int f0/1
+ip add 172.18.2.1 255.255.255.252
+no sh
+#write configs
+do wr

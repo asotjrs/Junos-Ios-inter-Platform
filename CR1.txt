@@ -1,0 +1,13 @@
+#to the config mode
+conf t
+#changing the hostname to CR1
+ho CR1
+#assigning ip addresses to the appropriate interfaces
+int f0/1
+ip add 172.20.100.10 255.255.255.0
+no sh
+int f0/0
+ip add 10.0.0.1 255.255.255.252
+no sh
+#writing  configuration
+do wr
