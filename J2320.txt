@@ -1,0 +1,17 @@
+#to the configuration mode
+cli
+edit
+#configure a password for the device if its new to commit changes
+set system root-authentication plain-text-password
+#configure the loopback interface to identify the router
+edit interfaces
+set lo0 unit 0 family inet address 192.168.1.1/32
+#configure the ip addresses on the interfaces 
+set em3.0 family inet address 172.18.1.2/30
+set em2.0 family inet address 172.20.66.1/30
+#configure the em1 interface for vlan tagging
+set em1 vlan-tagging
+set em1.100 vlan-id 100
+set em1.100 family inet address 172.20.100.1/24
+#finally we commit and quit
+commit and-quit
