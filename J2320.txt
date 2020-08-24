@@ -15,3 +15,12 @@ set em1.100 vlan-id 100
 set em1.100 family inet address 172.20.100.1/24
 #finally we commit and quit
 commit and-quit
+#then we do some connectivity testing between routers
+#and now we need to implement routing between two juniper routers
+#so we need to implement static routing to the loopback inside in the other router
+edit
+edit routing-options
+set static route 192.168.2.1/32 next-hop 172.20.66.2 
+commit and-quit
+#then we do some connectivity testing between routers
+
