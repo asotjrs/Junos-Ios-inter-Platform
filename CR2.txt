@@ -2,8 +2,9 @@
 conf t
 #changing the hostname to CR2
 ho CR2
-#assigning ip addresses to the appropriate interfaces
-int f0/1
+#assigning ip addresses to the appropriate interfaces with the tagged vlan
+int f0/1.200
+encapsulation dot1q 200
 ip add 172.20.200.10 255.255.255.0
 no sh
 int f0/0
