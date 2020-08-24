@@ -21,6 +21,8 @@ commit and-quit
 edit
 edit routing-options
 set static route 192.168.2.1/32 next-hop 172.20.66.2 
+#and also we need to implement the default routing on each router
+set static route 0.0.0.0/0 next-hop 172.18.1.1
 commit and-quit
 #then we do some connectivity testing between routers
 
