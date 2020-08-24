@@ -25,3 +25,7 @@ set static route 192.168.1.1/32 next-hop 172.20.66.1
 set static route 0.0.0.0/0 next-hop 172.18.2.1
 commit and-quit
 #then we do some connectivity testing between routers
+#now we need to configure the router to use a fixed source adress
+edit
+set system default-address-selection
+commit and-quit
